@@ -1,4 +1,4 @@
-import '@/utils/request-wrapper';
+import '@/utils/request-rewriter';
 
 import { Hono } from 'hono';
 
@@ -28,13 +28,12 @@ const app = new Hono();
 
 app.use(compress());
 
-app.use(jsxRenderer(
-    ({ children }) => <>{children}</>,
-    {
+app.use(
+    jsxRenderer(({ children }) => <>{children}</>, {
         docType: '<?xml version="1.0" encoding="UTF-8"?>',
-        stream: {}
-    }
-));
+        stream: {},
+    })
+);
 app.use(mLogger);
 app.use(sentry);
 app.use(accessControl);
