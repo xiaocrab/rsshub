@@ -1693,6 +1693,19 @@
       }
     ]
   },
+  "bc3ts.net": {
+    "_name": "爆料公社",
+    "web": [
+      {
+        "title": "動態",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/bc3ts/post/list/:sort?"
+      }
+    ]
+  },
   "beijingprice.cn": {
     "_name": "北京价格",
     ".": [
@@ -2472,6 +2485,27 @@
       }
     ]
   },
+  "2bt0.com": {
+    "_name": "不太灵影视",
+    ".": [
+      {
+        "title": "影视资源下载列表",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/mv/"
+        ],
+        "target": "/bt0/mv/:number/:domain?"
+      },
+      {
+        "title": "最新资源列表",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/tlist/"
+        ],
+        "target": "/bt0/tlist/:sc/:domain?"
+      }
+    ]
+  },
   "btbtt20.com": {
     "_name": "BT 之家",
     ".": [
@@ -2706,6 +2740,38 @@
           "/"
         ],
         "target": "/camchina/:id?"
+      }
+    ]
+  },
+  "cara.app": {
+    "_name": "Cara",
+    ".": [
+      {
+        "title": "Likes",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/:user",
+          "/:user/*"
+        ],
+        "target": "/cara/likes/:user"
+      },
+      {
+        "title": "Portfolio",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/:user",
+          "/:user/*"
+        ],
+        "target": "/cara/portfolio/:user"
+      },
+      {
+        "title": "Timeline",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/:user",
+          "/:user/*"
+        ],
+        "target": "/cara/timeline/:user"
       }
     ]
   },
@@ -9220,6 +9286,19 @@
       }
     ]
   },
+  "kelownacapnews.com": {
+    "_name": "Kelowna Capital News",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:type"
+        ],
+        "target": "/kelownacapnews/:type"
+      }
+    ]
+  },
   "kemono.su": {
     "_name": "Kemono",
     ".": [
@@ -10433,6 +10512,20 @@
           "/newsclass.aspx"
         ],
         "target": "/mydrivers/rank"
+      }
+    ]
+  },
+  "myfans.jp": {
+    "_name": "myfans",
+    ".": [
+      {
+        "title": "User Posts",
+        "docs": "https://docs.rsshub.app/routes/multimedia",
+        "source": [
+          "/:username",
+          "/:language/:username"
+        ],
+        "target": "/myfans/user/:username"
       }
     ]
   },

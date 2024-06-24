@@ -584,6 +584,9 @@
   "/bbcnewslabs/news": [
     "elxy"
   ],
+  "/bc3ts/post/list/:sort?": [
+    "TonyRL"
+  ],
   "/bdys/:caty?/:type?/:area?/:year?/:order?": [
     "nczitzk"
   ],
@@ -800,6 +803,9 @@
   "/bjwxdxh/:type?": [
     "Misaka13514"
   ],
+  "/bjx/fd/:type": [
+    "hualiong"
+  ],
   "/bjx/huanbao": [
     "zsimple"
   ],
@@ -868,6 +874,12 @@
   ],
   "/bsky/profile/:handle": [
     "TonyRL"
+  ],
+  "/bt0/mv/:number/:domain?": [
+    "miemieYaho"
+  ],
+  "/bt0/tlist/:sc/:domain?": [
+    "miemieYaho"
   ],
   "/btzj/:category?": [
     "nczitzk"
@@ -955,6 +967,15 @@
   "/cankaoxiaoxi/:id?": [
     "yuxinliu-alex",
     "nczitzk"
+  ],
+  "/cara/likes/:user": [
+    "KarasuShin"
+  ],
+  "/cara/portfolio/:user": [
+    "KarasuShin"
+  ],
+  "/cara/timeline/:user": [
+    "KarasuShin"
   ],
   "/cartoonmad/comic/:id": [
     "KellyHwong"
@@ -3388,6 +3409,9 @@
   "/keepass/": [
     "TonyRL"
   ],
+  "/kelownacapnews/:type": [
+    "hualiong"
+  ],
   "/kemono/:source?/:id?": [
     "nczitzk"
   ],
@@ -3828,6 +3852,9 @@
   "/mydrivers/:category{.+}?": [],
   "/mydrivers/rank/:range?": [
     "nczitzk"
+  ],
+  "/myfans/user/:username": [
+    "TonyRL"
   ],
   "/myfigurecollection/activity/:category?/:language?/:latestAdditions?/:latestEdits?/:latestAlerts?/:latestPictures?": [
     "nczitzk"
