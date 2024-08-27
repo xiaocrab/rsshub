@@ -70,7 +70,9 @@ export type Config = {
         temperature?: number;
         maxTokens?: number;
         endpoint: string;
-        prompt?: string;
+        inputOption: string;
+        promptTitle: string;
+        promptDescription: string;
     };
     bilibili: {
         cookies: Record<string, string | undefined>;
@@ -436,7 +438,9 @@ const calculateValue = () => {
             temperature: toInt(envs.OPENAI_TEMPERATURE, 0.2),
             maxTokens: toInt(envs.OPENAI_MAX_TOKENS, 0) || undefined,
             endpoint: envs.OPENAI_API_ENDPOINT || 'https://api.openai.com/v1',
-            prompt: envs.OPENAI_PROMPT || 'Please summarize the following article and reply with markdown format.',
+            inputOption: envs.OPENAI_INPUT_OPTION || 'description',
+            promptDescription: envs.OPENAI_PROMPT || 'Please summarize the following article and reply with markdown format.',
+            promptTitle: envs.OPENAI_PROMPT_TITLE || 'Please translate the following title into Simplified Chinese and reply only translated text.',
         },
 
         // Route-specific Configurations
@@ -718,26 +722,6 @@ calculateValue();
         } catch (error) {
             logger.error('Remote config load failed.', error);
         }
-    }
-
-    if (!envs.DISABLE_UMAMI && envs.NODE_ENV === 'production') {
-        ofetch('https://umami.rss3.io/api/send', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                'user-agent': TRUE_UA,
-            },
-            body: JSON.stringify({
-                payload: {
-                    hostname: 'rsshub.app',
-                    language: 'en-US',
-                    referrer: 'rsshub.app',
-                    url: 'rsshub.app',
-                    website: '239067cd-231f-4a3f-a478-cced11a84876',
-                },
-                type: 'event',
-            }),
-        });
     }
 })();
 
