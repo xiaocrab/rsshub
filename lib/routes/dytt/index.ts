@@ -6,7 +6,8 @@ import ofetch from '@/utils/ofetch';
 import { parseDate } from '@/utils/parse-date';
 import timezone from '@/utils/timezone';
 
-import { type CheerioAPI, type Cheerio, type Element, load } from 'cheerio';
+import { type CheerioAPI, type Cheerio, load } from 'cheerio';
+import type { Element } from 'domhandler';
 import { type Context } from 'hono';
 
 const domain: string = 'www.dydytt.net';
@@ -209,7 +210,7 @@ export const route: Route = {
 :::
 
 <details>
-  <summary>更多分类</summary>
+<summary>更多分类</summary>
 
 | 分类                                                  | ID                                               |
 | ----------------------------------------------------- | ------------------------------------------------ |
