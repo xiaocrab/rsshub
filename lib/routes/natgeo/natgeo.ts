@@ -1,6 +1,7 @@
-import { Route } from '@/types';
-import cache from '@/utils/cache';
 import { load } from 'cheerio';
+
+import type { Route } from '@/types';
+import cache from '@/utils/cache';
 import ofetch from '@/utils/ofetch';
 import { parseDate } from '@/utils/parse-date';
 
@@ -66,6 +67,7 @@ async function handler(ctx) {
 
     const urlList = $('.article-link-content h4')
         .toArray()
+        .filter((i) => $(i).closest('.article-link-right').length === 0) // 移除右側熱門精選
         .map((i) => ({
             link: $(i).find('a[href]').first().attr('href'),
         }))
