@@ -29094,6 +29094,78 @@ export default {
       "anime"
     ]
   },
+  "comic-fuz": {
+    "routes": {
+      "/magazine/:id": {
+        "path": "/magazine/:id",
+        "categories": [
+          "anime"
+        ],
+        "example": "/comic-fuz/magazine/27860",
+        "parameters": {
+          "id": "ComicFuz中对应的杂志id"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "comic-fuz.com/magazine/:id"
+            ],
+            "target": "/magazine/:id"
+          }
+        ],
+        "name": "杂志详情",
+        "maintainers": [
+          "xiaobailoves"
+        ],
+        "location": "magazine.ts",
+        "module": () => import('@/routes/comic-fuz/magazine.ts')
+      },
+      "/manga/:id": {
+        "path": "/manga/:id",
+        "categories": [
+          "anime"
+        ],
+        "example": "/comic-fuz/manga/218",
+        "parameters": {
+          "id": "ComicFuz中对应的漫画id"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "comic-fuz.com/manga/:id"
+            ],
+            "target": "/manga/:id"
+          }
+        ],
+        "name": "漫画详情",
+        "maintainers": [
+          "xiaobailoves"
+        ],
+        "location": "manga.ts",
+        "module": () => import('@/routes/comic-fuz/manga.ts')
+      }
+    },
+    "name": "COMIC FUZ",
+    "apiRoutes": {},
+    "url": "comic-fuz.com",
+    "lang": "ja"
+  },
   "comicat": {
     "routes": {
       "/search/:keyword": {
@@ -74434,6 +74506,44 @@ export default {
     "name": "Lens",
     "url": "www.lens.xyz",
     "lang": "en"
+  },
+  "lephoceen": {
+    "routes": {
+      "/chrono": {
+        "path": "/chrono",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/lephoceen/chrono",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "lephoceen.fr/chrono"
+            ],
+            "target": "/chrono"
+          }
+        ],
+        "name": "Fil Info Le Phocéen (Chrono)",
+        "maintainers": [
+          "Loopy03"
+        ],
+        "location": "chrono.ts",
+        "module": () => import('@/routes/lephoceen/chrono.ts')
+      }
+    },
+    "name": "Le Phocéen",
+    "apiRoutes": {},
+    "url": "lephoceen.fr",
+    "description": "Actualités de l'Olympique de Marseille du site lephocéen.fr"
   },
   "letterboxd": {
     "routes": {
