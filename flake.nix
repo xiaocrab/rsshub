@@ -13,10 +13,10 @@
       makeRSSHub = pkgs:
         let
           pnpm = pkgs.pnpm_10;
-          deps = pnpm.fetchDeps {
+          deps = pkgs.fetchPnpmDeps {
             pname = "rsshub";
             src = ./.;
-            hash = "sha256-QG1cIkZh+qBA5Dipt0iDLuQpEOI45wdFhuG/CTcRVU8=";
+            hash = "sha256-Kssm2wyrFM17wyiVj9pmrKmk9SaJKDMDa0CFZdlqRoM=";
             fetcherVersion = 2;
           };
         in
@@ -28,7 +28,8 @@
 
           nativeBuildInputs = with pkgs; [
             nodejs_22
-            pnpm.configHook
+            pnpm
+            pnpmConfigHook
             git
           ];
 
